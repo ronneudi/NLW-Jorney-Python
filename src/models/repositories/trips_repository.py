@@ -1,5 +1,5 @@
 from sqlite3 import Connection
-from typing import Dict, Tuple
+from typing import Dict, Tuple, List
 
 
 class TripsRepository:
@@ -32,6 +32,14 @@ class TripsRepository:
         )
         trip = cursor.fetchone()
         return trip
+
+    def find_all_trips(self) -> List[Tuple]:
+        cursor = self.__conn.cursor()
+        cursor.execute(
+            """SELECT * FROM trips"""
+        )
+        trips = cursor.fetchall()
+        return trips
 
     def update_trip_status_by_id(self, trips_id: str) -> None:
         cursor = self.__conn.cursor()
