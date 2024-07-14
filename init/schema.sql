@@ -14,8 +14,6 @@ CREATE TABLE IF NOT EXISTS 'emails_to_invite' (
     email TEXT NOT NULL,
     FOREIGN KEY (trip_id)
         REFERENCES trips(id)
-            ON DELETE CASCADE
-            ON UPDATE NO ACTION
 );
 
 CREATE TABLE IF NOT EXISTS 'links' (
@@ -25,8 +23,6 @@ CREATE TABLE IF NOT EXISTS 'links' (
     title TEXT NOT NULL,
     FOREIGN KEY (trip_id)
         REFERENCES trips(id)
-            ON DELETE CASCADE
-            ON UPDATE NO ACTION
 );
 
 CREATE TABLE IF NOT EXISTS 'participants' (
@@ -38,8 +34,6 @@ CREATE TABLE IF NOT EXISTS 'participants' (
     FOREIGN KEY (trip_id) REFERENCES trips(id),
     FOREIGN KEY (emails_to_invite_id)
         REFERENCES emails_to_invite(id)
-            ON DELETE CASCADE
-            ON UPDATE NO ACTION
 );
 
 CREATE TABLE IF NOT EXISTS 'activities' (
@@ -49,6 +43,4 @@ CREATE TABLE IF NOT EXISTS 'activities' (
     occurs_at DATETIME,
     FOREIGN KEY (trip_id)
         REFERENCES trips(id)
-            ON DELETE CASCADE
-            ON UPDATE NO ACTION
 );
