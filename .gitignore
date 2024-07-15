@@ -1,5 +1,8 @@
 **/__pycache__
 .venv
 .vscode
+.idea
 storage.db
 .pytest_cache
+.github
+.git

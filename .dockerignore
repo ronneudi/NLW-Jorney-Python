@@ -1,0 +1,12 @@
+storage.db
+readme.md
+.gitignore
+.venv
+.idea
+**/__pycache__
+.pytest_cache
+.vscode
+.git
+.dockerignore
+.github
+Dockerfile
