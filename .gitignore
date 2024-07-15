@@ -4,5 +4,4 @@
 .idea
 storage.db
 .pytest_cache
-.github
 .git
